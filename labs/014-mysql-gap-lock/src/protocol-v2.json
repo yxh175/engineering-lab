@@ -1,0 +1,9 @@
+{
+  "revision": "reset physical fixture before each independent trial to remove prior DELETE/INSERT history",
+  "reset": "TRUNCATE TABLE items; then insert three initial keys",
+  "business_insert": [15, 1],
+  "cases": 6,
+  "repeats_per_case": 10,
+  "previous_failed_run_preserved": "20261003T072111587527Z-docker",
+  "scope": "TRUNCATE is fixture preparation before transactions, not an application remedy for lock waits"
+}

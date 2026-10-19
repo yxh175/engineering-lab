@@ -1,0 +1,18 @@
+name: engineering-lab-021
+services:
+  builder:
+    image: golang:1.25.4-bookworm@sha256:e17419604b6d1f9bc245694425f0ec9b1b53685c80850900a376fb10cb0f70cb
+    working_dir: /lab
+    volumes: [.:/lab]
+    entrypoint: [sh, -c, 'go version && gcc --version && ps --version && vmstat --version && gcc -std=c11 -O2 -Wall -Wextra -Werror -o .work/actor021-linux src/actor.c && go vet ./src/observer_v2 && go build -o .work/observer021-linux ./src/observer_v2']
+    cpus: 2.0
+    mem_limit: 512m
+    network_mode: none
+  runner:
+    image: golang:1.25.4-bookworm@sha256:e17419604b6d1f9bc245694425f0ec9b1b53685c80850900a376fb10cb0f70cb
+    working_dir: /lab
+    volumes: [.:/lab]
+    entrypoint: [/lab/.work/observer021-linux]
+    cpus: 1.0
+    mem_limit: 128m
+    network_mode: none

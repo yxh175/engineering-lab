@@ -1,0 +1,5 @@
+[
+  {"case":"numeric","query":"SELECT id,HEX(code) FROM fixture WHERE code = 1 ORDER BY id"},
+  {"case":"string","query":"SELECT id,HEX(code) FROM fixture WHERE code = '1' ORDER BY id"},
+  {"case":"string-control","query":"SELECT id,HEX(code) FROM fixture WHERE code = '1005' ORDER BY id"}
+]

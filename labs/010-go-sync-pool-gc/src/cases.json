@@ -1,0 +1,9 @@
+[
+  {"case":"pool-no-gc","gc_delta":0,"exit":0,"found":true,"returned_id":1,"returned_value":314159,"new_calls":0},
+  {"case":"pool-one-gc","gc_delta":1,"exit":0,"found":true,"returned_id":1,"returned_value":314159,"new_calls":0},
+  {"case":"pool-two-gc","gc_delta":2,"exit":3,"found":false,"returned_id":0,"returned_value":0,"new_calls":0},
+  {"case":"pool-refresh-two-gc","gc_delta":2,"exit":0,"found":true,"returned_id":1,"returned_value":314159,"new_calls":0},
+  {"case":"pool-new-two-gc","gc_delta":2,"exit":0,"found":true,"returned_id":2,"returned_value":42,"new_calls":2},
+  {"case":"cache-two-gc","gc_delta":2,"exit":0,"found":true,"returned_id":1,"returned_value":314159,"new_calls":0},
+  {"case":"pool-new-hot","gc_delta":0,"exit":0,"found":true,"returned_id":1,"returned_value":999,"new_calls":1}
+]

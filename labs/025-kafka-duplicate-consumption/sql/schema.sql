@@ -1,0 +1,11 @@
+CREATE TABLE ledger (
+    case_id VARCHAR(80) PRIMARY KEY,
+    balance INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB;
+CREATE TABLE applied (
+    case_id VARCHAR(80) NOT NULL,
+    event_id VARCHAR(80) NOT NULL,
+    PRIMARY KEY(case_id,event_id)
+) ENGINE=InnoDB;
+SELECT VERSION();
+SELECT TABLE_NAME,ENGINE FROM information_schema.tables WHERE TABLE_SCHEMA='lab025' ORDER BY TABLE_NAME;

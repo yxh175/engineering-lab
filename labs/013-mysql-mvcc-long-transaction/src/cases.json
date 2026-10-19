@@ -1,0 +1,6 @@
+[
+  {"case":"rr-long-view","isolation":"REPEATABLE READ","initial_read":true,"commit_before_writer":false,"ordinary_after":0,"hold_old_view":true},
+  {"case":"rr-short-view","isolation":"REPEATABLE READ","initial_read":true,"commit_before_writer":true,"ordinary_after":100,"hold_old_view":false},
+  {"case":"rr-begin-only","isolation":"REPEATABLE READ","initial_read":false,"commit_before_writer":false,"ordinary_after":100,"hold_old_view":false},
+  {"case":"rc-long-tx","isolation":"READ COMMITTED","initial_read":true,"commit_before_writer":false,"ordinary_after":100,"hold_old_view":false}
+]

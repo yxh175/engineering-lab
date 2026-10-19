@@ -1,0 +1,13 @@
+SELECT rt.PROCESSLIST_ID,bt.PROCESSLIST_ID,
+       r.INDEX_NAME,r.LOCK_TYPE,r.LOCK_MODE,r.LOCK_STATUS,IFNULL(r.LOCK_DATA,'NULL'),
+       b.INDEX_NAME,b.LOCK_TYPE,b.LOCK_MODE,b.LOCK_STATUS,IFNULL(b.LOCK_DATA,'NULL')
+FROM performance_schema.data_lock_waits w
+JOIN performance_schema.data_locks r
+  ON r.ENGINE=w.ENGINE AND r.ENGINE_LOCK_ID=w.REQUESTING_ENGINE_LOCK_ID
+JOIN performance_schema.data_locks b
+  ON b.ENGINE=w.ENGINE AND b.ENGINE_LOCK_ID=w.BLOCKING_ENGINE_LOCK_ID
+JOIN performance_schema.threads rt ON rt.THREAD_ID=r.THREAD_ID
+JOIN performance_schema.threads bt ON bt.THREAD_ID=b.THREAD_ID
+WHERE r.OBJECT_SCHEMA='engine_lab_014' AND r.OBJECT_NAME='items'
+  AND rt.PROCESSLIST_ID={writer_id} AND bt.PROCESSLIST_ID={holder_id}
+ORDER BY r.ENGINE_LOCK_ID,b.ENGINE_LOCK_ID;

@@ -1,0 +1,6 @@
+[
+  {"case":"narrow-before","phase":"before","columns":"id,tenant_id,kind,seq_no","covering":true},
+  {"case":"wide-before","phase":"before","columns":"id,tenant_id,kind,seq_no,payload","covering":false},
+  {"case":"wide-after","phase":"after","columns":"id,tenant_id,kind,seq_no,payload","covering":true},
+  {"case":"narrow-after","phase":"after","columns":"id,tenant_id,kind,seq_no","covering":true}
+]

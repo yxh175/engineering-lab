@@ -1,0 +1,35 @@
+[
+  {
+    "case": "opposite-no-retry",
+    "order": "opposite",
+    "retry": "none",
+    "expected_final": [
+      1,
+      1
+    ]
+  },
+  {
+    "case": "opposite-statement-retry",
+    "order": "opposite",
+    "retry": "failed_statement",
+    "expected_final": "victim first row remains1, other row2"
+  },
+  {
+    "case": "opposite-transaction-retry",
+    "order": "opposite",
+    "retry": "whole_transaction",
+    "expected_final": [
+      2,
+      2
+    ]
+  },
+  {
+    "case": "same-order",
+    "order": "ascending",
+    "retry": "none",
+    "expected_final": [
+      2,
+      2
+    ]
+  }
+]

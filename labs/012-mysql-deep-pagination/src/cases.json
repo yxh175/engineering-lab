@@ -1,0 +1,9 @@
+[
+  {"case":"offset-zero","offset":0,"first_id":1,"same_deep_page":false,"query":"SELECT seq_no,id,payload FROM events FORCE INDEX (idx_page) ORDER BY seq_no,id LIMIT 0,20"},
+  {"case":"offset-middle","offset":10017,"first_id":10018,"same_deep_page":false,"query":"SELECT seq_no,id,payload FROM events FORCE INDEX (idx_page) ORDER BY seq_no,id LIMIT 10017,20"},
+  {"case":"offset-deep","offset":500017,"first_id":500018,"same_deep_page":true,"query":"SELECT seq_no,id,payload FROM events FORCE INDEX (idx_page) ORDER BY seq_no,id LIMIT 500017,20"},
+  {"case":"deep-default","first_id":500018,"same_deep_page":true,"query":"SELECT seq_no,id,payload FROM events ORDER BY seq_no,id LIMIT 500017,20"},
+  {"case":"deferred-deep","first_id":500018,"same_deep_page":true,"query":"SELECT e.seq_no,e.id,e.payload FROM (SELECT seq_no,id FROM events FORCE INDEX (idx_page) ORDER BY seq_no,id LIMIT 500017,20) AS page JOIN events e ON e.id=page.id ORDER BY page.seq_no,page.id"},
+  {"case":"seek-complete","first_id":500018,"same_deep_page":true,"query":"SELECT seq_no,id,payload FROM events FORCE INDEX (idx_page) WHERE seq_no>12500 OR (seq_no=12500 AND id>500017) ORDER BY seq_no,id LIMIT 20"},
+  {"case":"seek-missing-tie","first_id":500041,"same_deep_page":false,"query":"SELECT seq_no,id,payload FROM events FORCE INDEX (idx_page) WHERE seq_no>12500 ORDER BY seq_no,id LIMIT 20"}
+]

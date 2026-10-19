@@ -1,0 +1,13 @@
+{
+  "revision": "replace unproven immediate-zero purge assumption with recorded bounded baseline and public DML scheduling",
+  "business_account_commits": 100,
+  "preparation_account_commits": 100,
+  "purge_threads": 4,
+  "purge_batch_size": 20,
+  "observational_history_limit": 80,
+  "control_table_commits_per_pulse": 100,
+  "control_pulse_stages": ["before_reader_view", "after_business_writes_reader_open", "after_reader_commit"],
+  "quiet_after_commit_seconds": 1,
+  "purge_observation_budget_seconds": 12,
+  "interpretation": "80 is this protocol's explicit observation bound, informed by the source wake-up threshold; it is not a MySQL guarantee, a zero baseline, or an undo byte count"
+}

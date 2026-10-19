@@ -1,0 +1,6 @@
+[
+  {"case":"no-merge","mode":"none","processes":1,"workers_per_process":32,"origin_gate":32,"expected_fetches":32},
+  {"case":"mutex-no-recheck","mode":"mutex","processes":1,"workers_per_process":32,"origin_gate":1,"expected_fetches":32},
+  {"case":"mutex-recheck","mode":"recheck","processes":1,"workers_per_process":32,"origin_gate":1,"expected_fetches":1},
+  {"case":"two-process-recheck","mode":"recheck","processes":2,"workers_per_process":16,"origin_gate":2,"expected_fetches":2}
+]

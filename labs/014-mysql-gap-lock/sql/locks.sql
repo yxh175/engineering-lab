@@ -1,0 +1,7 @@
+SELECT t.PROCESSLIST_ID,IFNULL(l.INDEX_NAME,'NULL'),l.LOCK_TYPE,
+       l.LOCK_MODE,l.LOCK_STATUS,IFNULL(l.LOCK_DATA,'NULL')
+FROM performance_schema.data_locks l
+JOIN performance_schema.threads t ON t.THREAD_ID=l.THREAD_ID
+WHERE l.OBJECT_SCHEMA='engine_lab_014' AND l.OBJECT_NAME='items'
+  AND t.PROCESSLIST_ID={holder_id}
+ORDER BY l.LOCK_TYPE,l.INDEX_NAME,l.LOCK_DATA,l.LOCK_MODE;

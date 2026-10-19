@@ -1,0 +1,362 @@
+[
+  {
+    "query_id": "q01",
+    "query": "OR-731 要怎么重放，使用什么标识？",
+    "relevant_doc_ids": [
+      "orders"
+    ],
+    "evidence": [
+      {
+        "doc_id": "orders",
+        "start": 110,
+        "end": 196,
+        "text": "订单接收返回 OR-731 时，先读取幂等记录中的 request_id；只有该记录显示尚未进入支付步骤，才可以用原 request_id 重放接收请求，不能重新生成标识。"
+      }
+    ]
+  },
+  {
+    "query_id": "q02",
+    "query": "订单已经扣款但界面还在待支付，应该查什么并恢复哪个步骤？",
+    "relevant_doc_ids": [
+      "orders"
+    ],
+    "evidence": [
+      {
+        "doc_id": "orders",
+        "start": 197,
+        "end": 259,
+        "text": "支付已确认而订单显示待支付时，使用支付流水号查询回调收件箱；如果收件箱状态是已处理，就重新执行订单状态投影，而不要再次扣款。"
+      }
+    ]
+  },
+  {
+    "query_id": "q03",
+    "query": "IV-284 重试前需要查哪条流水，旧预占标识还能用吗？",
+    "relevant_doc_ids": [
+      "inventory"
+    ],
+    "evidence": [
+      {
+        "doc_id": "inventory",
+        "start": 106,
+        "end": 195,
+        "text": "库存预占遇到 IV-284 时，必须先查询 reservation_id 的释放流水；若释放已经提交，重试只能使用新的 reservation_id，旧标识不能再次进入预占阶段。"
+      }
+    ]
+  },
+  {
+    "query_id": "q04",
+    "query": "页面显示没货但账本还有库存，怎样恢复展示而不修改真实库存？",
+    "relevant_doc_ids": [
+      "inventory"
+    ],
+    "evidence": [
+      {
+        "doc_id": "inventory",
+        "start": 196,
+        "end": 263,
+        "text": "页面可售数量为零而账本仍有余量时，确认刷新任务的版本号；只有缓存版本落后于账本版本，才删除该商品展示缓存并重新加载，不能直接增加库存。"
+      }
+    ]
+  },
+  {
+    "query_id": "q05",
+    "query": "BL-906 何时能续跑批次，何时必须冻结？",
+    "relevant_doc_ids": [
+      "billing"
+    ],
+    "evidence": [
+      {
+        "doc_id": "billing",
+        "start": 101,
+        "end": 174,
+        "text": "账单汇总出现 BL-906 时，先比较 batch_id 对应的输入校验值；校验值一致才能续跑该批次，校验值不一致必须冻结批次并创建人工差异工单。"
+      }
+    ]
+  },
+  {
+    "query_id": "q06",
+    "query": "月度账单已经生成但用户没收到邮件，需要重做扣费吗？",
+    "relevant_doc_ids": [
+      "billing"
+    ],
+    "evidence": [
+      {
+        "doc_id": "billing",
+        "start": 175,
+        "end": 239,
+        "text": "账单邮件没有送达时，先查询 report_id 的发布状态；已发布的报表只重试邮件投递，不能重新执行月度扣费或重新生成账单流水。"
+      }
+    ]
+  },
+  {
+    "query_id": "q07",
+    "query": "CT-417 的来源快照比现有目录旧时应该怎样处理？",
+    "relevant_doc_ids": [
+      "catalog"
+    ],
+    "evidence": [
+      {
+        "doc_id": "catalog",
+        "start": 104,
+        "end": 183,
+        "text": "目录同步返回 CT-417 时，先检查 snapshot_id 的来源版本；若来源版本比当前目录旧，就丢弃该同步任务并记录审计事件，不允许回写覆盖较新的目录。"
+      }
+    ]
+  },
+  {
+    "query_id": "q08",
+    "query": "详情页新标题已生效但搜索显示旧标题，应该补哪一个环节？",
+    "relevant_doc_ids": [
+      "catalog"
+    ],
+    "evidence": [
+      {
+        "doc_id": "catalog",
+        "start": 184,
+        "end": 255,
+        "text": "商品详情页已经更新而搜索仍显示旧标题时，检查检索投影的 applied_version；若其小于目录版本，重新投递投影事件，不能回滚详情数据。"
+      }
+    ]
+  },
+  {
+    "query_id": "q09",
+    "query": "SH-552 后怎样判断能否再次预约承运商？",
+    "relevant_doc_ids": [
+      "shipping"
+    ],
+    "evidence": [
+      {
+        "doc_id": "shipping",
+        "start": 101,
+        "end": 181,
+        "text": "承运商预约报 SH-552 时，先使用 shipment_id 查询外部预约；只有外部明确没有预约，才重新提交预约请求，若已有预约则回填预约号码而不是重复预约。"
+      }
+    ]
+  },
+  {
+    "query_id": "q10",
+    "query": "运输单已创建却没有打印任务，应该重建单据还是补发事件？",
+    "relevant_doc_ids": [
+      "shipping"
+    ],
+    "evidence": [
+      {
+        "doc_id": "shipping",
+        "start": 182,
+        "end": 252,
+        "text": "运输单已创建但仓库未收到打印任务时，查看打印收件箱中的 shipment_id；如果任务未投递就补发打印事件，已完成打印则不重复生成运输单。"
+      }
+    ]
+  },
+  {
+    "query_id": "q11",
+    "query": "SE-663 对索引别名切换有什么两个前置条件？",
+    "relevant_doc_ids": [
+      "search"
+    ],
+    "evidence": [
+      {
+        "doc_id": "search",
+        "start": 108,
+        "end": 190,
+        "text": "索引发布遇到 SE-663 时，先检查 generation_id 的校验状态；只有校验状态为通过且别名仍指向旧代次，才允许原子切换别名，未通过校验的索引不能上线。"
+      }
+    ]
+  },
+  {
+    "query_id": "q12",
+    "query": "新索引有文档但请求还查不到，应检查哪个路由状态？",
+    "relevant_doc_ids": [
+      "search"
+    ],
+    "evidence": [
+      {
+        "doc_id": "search",
+        "start": 191,
+        "end": 249,
+        "text": "文档已经进入新索引但查询仍找不到时，核对查询路由的代次号；若路由仍读旧代次，刷新路由缓存，不要删除已经验证的新索引。"
+      }
+    ]
+  },
+  {
+    "query_id": "q13",
+    "query": "AU-845 的 key_version 已撤销还能临时恢复密钥吗？",
+    "relevant_doc_ids": [
+      "auth"
+    ],
+    "evidence": [
+      {
+        "doc_id": "auth",
+        "start": 109,
+        "end": 187,
+        "text": "凭据校验出现 AU-845 时，先查询 key_version 是否在可信列表；如果该版本已撤销，应拒绝凭据并要求重新登录，不能临时恢复已经撤销的签名密钥。"
+      }
+    ]
+  },
+  {
+    "query_id": "q14",
+    "query": "能登录但不能下载报表，应该改授权还是延长登录有效期？",
+    "relevant_doc_ids": [
+      "auth"
+    ],
+    "evidence": [
+      {
+        "doc_id": "auth",
+        "start": 188,
+        "end": 247,
+        "text": "用户能够登录却无权下载报表时，查询资源策略中的角色绑定；凭据有效但角色缺失要修正授权绑定，不应通过延长凭据有效期解决。"
+      }
+    ]
+  },
+  {
+    "query_id": "q15",
+    "query": "UP-328 时什么条件下可以重新合并，缺片该怎么办？",
+    "relevant_doc_ids": [
+      "upload"
+    ],
+    "evidence": [
+      {
+        "doc_id": "upload",
+        "start": 112,
+        "end": 194,
+        "text": "文件合并返回 UP-328 时，先比较 upload_id 的分片清单与实际数量；只有清单完整且每片校验通过才能重新合并，缺片时必须补传缺失分片而不是发布残缺对象。"
+      }
+    ]
+  },
+  {
+    "query_id": "q16",
+    "query": "对象已上传成功但下载不存在，哪个发布步骤可能需要重放？",
+    "relevant_doc_ids": [
+      "upload"
+    ],
+    "evidence": [
+      {
+        "doc_id": "upload",
+        "start": 195,
+        "end": 276,
+        "text": "对象存储中有文件但下载返回不存在时，查询对象元数据的 published_version；若发布尚未提交，重放元数据发布步骤，不要重复上传已经校验成功的全部分片。"
+      }
+    ]
+  },
+  {
+    "query_id": "q17",
+    "query": "NT-779 已有接收回执时还能换 message_id 重新发短信吗？",
+    "relevant_doc_ids": [
+      "notify"
+    ],
+    "evidence": [
+      {
+        "doc_id": "notify",
+        "start": 114,
+        "end": 186,
+        "text": "短信通道返回 NT-779 时，先读取 message_id 的渠道回执；若回执已确认接收，只查询送达状态，不能重新提交同一短信并更换消息标识。"
+      }
+    ]
+  },
+  {
+    "query_id": "q18",
+    "query": "站内信正文存在但未读角标为零，应该恢复哪份投影？",
+    "relevant_doc_ids": [
+      "notify"
+    ],
+    "evidence": [
+      {
+        "doc_id": "notify",
+        "start": 187,
+        "end": 244,
+        "text": "站内信已经保存但页面没有未读角标时，检查用户未读计数投影；正文存在且投影版本落后时，补做计数投影，不重发整条通知。"
+      }
+    ]
+  },
+  {
+    "query_id": "q19",
+    "query": "EX-214 文件完整时应该重跑查询还是重新签下载链接？",
+    "relevant_doc_ids": [
+      "export"
+    ],
+    "evidence": [
+      {
+        "doc_id": "export",
+        "start": 112,
+        "end": 189,
+        "text": "导出下载出现 EX-214 时，先查询 export_id 的文件状态；若文件已完成且校验通过，仅重新签发下载地址，不能重新执行快照查询并改变原导出内容。"
+      }
+    ]
+  },
+  {
+    "query_id": "q20",
+    "query": "导出漏掉最后一页且游标字段不完整，能直接向旧文件追加吗？",
+    "relevant_doc_ids": [
+      "export"
+    ],
+    "evidence": [
+      {
+        "doc_id": "export",
+        "start": 190,
+        "end": 256,
+        "text": "下载文件缺少最后一页记录时，核对快照分页游标是否包含完整排序字段；字段不完整的任务必须标记失败并重新生成，不能在旧文件末尾盲目追加。"
+      }
+    ]
+  },
+  {
+    "query_id": "q21",
+    "query": "ST-492 已有成功银行回执后应该怎么恢复？",
+    "relevant_doc_ids": [
+      "settlement"
+    ],
+    "evidence": [
+      {
+        "doc_id": "settlement",
+        "start": 111,
+        "end": 190,
+        "text": "结算提交出现 ST-492 时，先核对 settlement_id 的银行回执；若回执已经成功，只补记转账结果与本地状态，不允许新建转账任务再次支付同一结算。"
+      }
+    ]
+  },
+  {
+    "query_id": "q22",
+    "query": "流水一致但试算和正式结算金额不同，先比较什么版本？",
+    "relevant_doc_ids": [
+      "settlement"
+    ],
+    "evidence": [
+      {
+        "doc_id": "settlement",
+        "start": 191,
+        "end": 250,
+        "text": "试算金额与正式金额不同但流水相同时，比较两次使用的费率规则版本；版本不同要建立差异审核记录，不能修改原流水来凑齐金额。"
+      }
+    ]
+  },
+  {
+    "query_id": "q23",
+    "query": "GW-608 上游提交状态未知时能否换标识直接重试？",
+    "relevant_doc_ids": [
+      "gateway"
+    ],
+    "evidence": [
+      {
+        "doc_id": "gateway",
+        "start": 105,
+        "end": 181,
+        "text": "网关出现 GW-608 时，先查询 trace_id 对应的上游提交状态；如果状态未知，必须交由业务幂等查询确认，不能直接生成新请求标识盲目重试写操作。"
+      }
+    ]
+  },
+  {
+    "query_id": "q24",
+    "query": "服务健康但用户请求仍到旧实例，应该刷新什么？",
+    "relevant_doc_ids": [
+      "gateway"
+    ],
+    "evidence": [
+      {
+        "doc_id": "gateway",
+        "start": 182,
+        "end": 256,
+        "text": "健康检查正常但用户请求仍被路由到旧实例时，检查路由缓存的 deployment_version；缓存落后就刷新该路由，不要仅重复重启健康的后端进程。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "case": "rr-empty-timeout",
+    "isolation": "REPEATABLE READ",
+    "query": "SELECT id FROM items WHERE id>10 AND id<20 FOR UPDATE;",
+    "holder_rows": [],
+    "wait": true,
+    "action": "timeout",
+    "blocking_mode": "X,GAP",
+    "lock_timeout_seconds": 2
+  },
+  {
+    "case": "rc-empty-complete",
+    "isolation": "READ COMMITTED",
+    "query": "SELECT id FROM items WHERE id>10 AND id<20 FOR UPDATE;",
+    "holder_rows": [],
+    "wait": false,
+    "action": "complete",
+    "lock_timeout_seconds": 5
+  },
+  {
+    "case": "rr-unique-existing",
+    "isolation": "REPEATABLE READ",
+    "query": "SELECT id FROM items WHERE id=10 FOR UPDATE;",
+    "holder_rows": [
+      10
+    ],
+    "wait": false,
+    "action": "complete",
+    "lock_timeout_seconds": 5
+  },
+  {
+    "case": "rr-empty-release",
+    "isolation": "REPEATABLE READ",
+    "query": "SELECT id FROM items WHERE id>10 AND id<20 FOR UPDATE;",
+    "holder_rows": [],
+    "wait": true,
+    "action": "release",
+    "blocking_mode": "X,GAP",
+    "lock_timeout_seconds": 5
+  },
+  {
+    "case": "rr-unique-missing",
+    "isolation": "REPEATABLE READ",
+    "query": "SELECT id FROM items WHERE id=15 FOR UPDATE;",
+    "holder_rows": [],
+    "wait": true,
+    "action": "timeout",
+    "blocking_mode": "X,GAP",
+    "lock_timeout_seconds": 2
+  },
+  {
+    "case": "rr-nextkey-timeout",
+    "isolation": "REPEATABLE READ",
+    "query": "SELECT id FROM items WHERE id>10 AND id<=20 FOR UPDATE;",
+    "holder_rows": [
+      20
+    ],
+    "wait": true,
+    "action": "timeout",
+    "blocking_mode": "X",
+    "lock_timeout_seconds": 2
+  }
+]

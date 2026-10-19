@@ -1,0 +1,16 @@
+.work/
+**/.work/
+**/results/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.exe
+*.test
+*.pprof
+*.log
+.venv/
+venv/
+.idea/
+.vscode/

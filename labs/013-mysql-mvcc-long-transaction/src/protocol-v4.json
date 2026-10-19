@@ -1,0 +1,18 @@
+{
+  "revision": "control history removal frequency instead of assuming wake-up implies truncation",
+  "business_account_commits": 100,
+  "preparation_account_commits": 100,
+  "purge_threads": 4,
+  "purge_batch_size": 20,
+  "observational_history_limit": 5,
+  "control_table_commits_per_pulse": 100,
+  "control_pulse_stages": [
+    "before_reader_view",
+    "after_business_writes_reader_open",
+    "after_reader_commit"
+  ],
+  "quiet_after_commit_seconds": 1,
+  "purge_observation_budget_seconds": 12,
+  "interpretation": "The measured baseline and final tail must be <=5 in this controlled fixture. This is an observation gate, not a MySQL guarantee or a byte count. All earlier failed protocols are preserved.",
+  "purge_rseg_truncate_frequency": 1
+}

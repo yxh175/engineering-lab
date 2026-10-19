@@ -1,0 +1,10 @@
+{
+  "purge_threads_expected": 4,
+  "purge_batch_size_control": 20,
+  "preparation_committed_updates_per_trial": 100,
+  "preparation_reset_value": 0,
+  "measured_committed_updates_per_trial": 100,
+  "baseline_history_required": 0,
+  "why": "First collector failed before business experiment while startup/reset history remained in short budget; controlled purge wake threshold and separate preparation preserve the original four-case business comparison.",
+  "private_purge_hooks": false
+}

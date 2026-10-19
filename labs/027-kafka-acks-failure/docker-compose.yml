@@ -1,0 +1,186 @@
+{
+  "name": "engineering-lab-027",
+  "services": {
+    "controller": {
+      "image": "apache/kafka:3.9.1@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+      "container_name": "lab027-controller",
+      "hostname": "controller",
+      "environment": {
+        "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP": "CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,HOST:PLAINTEXT",
+        "KAFKA_CONTROLLER_LISTENER_NAMES": "CONTROLLER",
+        "KAFKA_CONTROLLER_QUORUM_VOTERS": "100@controller:9093",
+        "KAFKA_INTER_BROKER_LISTENER_NAME": "BROKER",
+        "CLUSTER_ID": "4L6g3nShT-eMCtK--X86sw",
+        "KAFKA_LOG_DIRS": "/tmp/kraft-combined-logs",
+        "KAFKA_HEAP_OPTS": "-Xms128m -Xmx256m",
+        "KAFKA_NODE_ID": 100,
+        "KAFKA_PROCESS_ROLES": "controller",
+        "KAFKA_LISTENERS": "CONTROLLER://:9093"
+      },
+      "mem_limit": "512m",
+      "cpus": 1.0,
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "/bin/bash",
+          "-c",
+          "echo > /dev/tcp/localhost/9093"
+        ],
+        "interval": "3s",
+        "timeout": "3s",
+        "retries": 30,
+        "start_period": "10s"
+      }
+    },
+    "broker1": {
+      "image": "apache/kafka:3.9.1@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+      "container_name": "lab027-broker1",
+      "hostname": "broker1",
+      "environment": {
+        "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP": "CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,HOST:PLAINTEXT",
+        "KAFKA_CONTROLLER_LISTENER_NAMES": "CONTROLLER",
+        "KAFKA_CONTROLLER_QUORUM_VOTERS": "100@controller:9093",
+        "KAFKA_INTER_BROKER_LISTENER_NAME": "BROKER",
+        "CLUSTER_ID": "4L6g3nShT-eMCtK--X86sw",
+        "KAFKA_LOG_DIRS": "/tmp/kraft-combined-logs",
+        "KAFKA_HEAP_OPTS": "-Xms128m -Xmx256m",
+        "KAFKA_NODE_ID": 1,
+        "KAFKA_PROCESS_ROLES": "broker",
+        "KAFKA_LISTENERS": "BROKER://:9092,HOST://:9094",
+        "KAFKA_ADVERTISED_LISTENERS": "BROKER://broker1:9092,HOST://127.0.0.1:19027",
+        "KAFKA_BROKER_HEARTBEAT_INTERVAL_MS": 1000,
+        "KAFKA_BROKER_SESSION_TIMEOUT_MS": 6000,
+        "KAFKA_REPLICA_LAG_TIME_MAX_MS": 1000,
+        "KAFKA_AUTO_CREATE_TOPICS_ENABLE": "false",
+        "KAFKA_AUTO_LEADER_REBALANCE_ENABLE": "false",
+        "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_MIN_ISR": 2,
+        "KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS": 0
+      },
+      "ports": [
+        "127.0.0.1:19027:9094"
+      ],
+      "mem_limit": "512m",
+      "cpus": 1.0,
+      "depends_on": {
+        "controller": {
+          "condition": "service_healthy"
+        }
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "/opt/kafka/bin/kafka-topics.sh",
+          "--bootstrap-server",
+          "broker1:9092",
+          "--list"
+        ],
+        "interval": "5s",
+        "timeout": "10s",
+        "retries": 30,
+        "start_period": "15s"
+      }
+    },
+    "broker2": {
+      "image": "apache/kafka:3.9.1@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+      "container_name": "lab027-broker2",
+      "hostname": "broker2",
+      "environment": {
+        "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP": "CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,HOST:PLAINTEXT",
+        "KAFKA_CONTROLLER_LISTENER_NAMES": "CONTROLLER",
+        "KAFKA_CONTROLLER_QUORUM_VOTERS": "100@controller:9093",
+        "KAFKA_INTER_BROKER_LISTENER_NAME": "BROKER",
+        "CLUSTER_ID": "4L6g3nShT-eMCtK--X86sw",
+        "KAFKA_LOG_DIRS": "/tmp/kraft-combined-logs",
+        "KAFKA_HEAP_OPTS": "-Xms128m -Xmx256m",
+        "KAFKA_NODE_ID": 2,
+        "KAFKA_PROCESS_ROLES": "broker",
+        "KAFKA_LISTENERS": "BROKER://:9092,HOST://:9094",
+        "KAFKA_ADVERTISED_LISTENERS": "BROKER://broker2:9092,HOST://127.0.0.1:19028",
+        "KAFKA_BROKER_HEARTBEAT_INTERVAL_MS": 1000,
+        "KAFKA_BROKER_SESSION_TIMEOUT_MS": 6000,
+        "KAFKA_REPLICA_LAG_TIME_MAX_MS": 1000,
+        "KAFKA_AUTO_CREATE_TOPICS_ENABLE": "false",
+        "KAFKA_AUTO_LEADER_REBALANCE_ENABLE": "false",
+        "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_MIN_ISR": 2,
+        "KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS": 0
+      },
+      "ports": [
+        "127.0.0.1:19028:9094"
+      ],
+      "mem_limit": "512m",
+      "cpus": 1.0,
+      "depends_on": {
+        "controller": {
+          "condition": "service_healthy"
+        }
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "/opt/kafka/bin/kafka-topics.sh",
+          "--bootstrap-server",
+          "broker2:9092",
+          "--list"
+        ],
+        "interval": "5s",
+        "timeout": "10s",
+        "retries": 30,
+        "start_period": "15s"
+      }
+    },
+    "broker3": {
+      "image": "apache/kafka:3.9.1@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+      "container_name": "lab027-broker3",
+      "hostname": "broker3",
+      "environment": {
+        "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP": "CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,HOST:PLAINTEXT",
+        "KAFKA_CONTROLLER_LISTENER_NAMES": "CONTROLLER",
+        "KAFKA_CONTROLLER_QUORUM_VOTERS": "100@controller:9093",
+        "KAFKA_INTER_BROKER_LISTENER_NAME": "BROKER",
+        "CLUSTER_ID": "4L6g3nShT-eMCtK--X86sw",
+        "KAFKA_LOG_DIRS": "/tmp/kraft-combined-logs",
+        "KAFKA_HEAP_OPTS": "-Xms128m -Xmx256m",
+        "KAFKA_NODE_ID": 3,
+        "KAFKA_PROCESS_ROLES": "broker",
+        "KAFKA_LISTENERS": "BROKER://:9092,HOST://:9094",
+        "KAFKA_ADVERTISED_LISTENERS": "BROKER://broker3:9092,HOST://127.0.0.1:19029",
+        "KAFKA_BROKER_HEARTBEAT_INTERVAL_MS": 1000,
+        "KAFKA_BROKER_SESSION_TIMEOUT_MS": 6000,
+        "KAFKA_REPLICA_LAG_TIME_MAX_MS": 1000,
+        "KAFKA_AUTO_CREATE_TOPICS_ENABLE": "false",
+        "KAFKA_AUTO_LEADER_REBALANCE_ENABLE": "false",
+        "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR": 3,
+        "KAFKA_TRANSACTION_STATE_LOG_MIN_ISR": 2,
+        "KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS": 0
+      },
+      "ports": [
+        "127.0.0.1:19029:9094"
+      ],
+      "mem_limit": "512m",
+      "cpus": 1.0,
+      "depends_on": {
+        "controller": {
+          "condition": "service_healthy"
+        }
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "/opt/kafka/bin/kafka-topics.sh",
+          "--bootstrap-server",
+          "broker3:9092",
+          "--list"
+        ],
+        "interval": "5s",
+        "timeout": "10s",
+        "retries": 30,
+        "start_period": "15s"
+      }
+    }
+  }
+}

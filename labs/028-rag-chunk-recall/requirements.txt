@@ -1,0 +1,4 @@
+transformers==4.49.0
+numpy==1.26.4
+safetensors==0.5.3
+tokenizers==0.21.0

@@ -1,0 +1,7 @@
+[
+  {"case":"bad-repeated-miss","negative_cache":false,"workload":"repeated","negative_ttl_ms":10000,"expected_origin_queries":62},
+  {"case":"negative-repeated-miss","negative_cache":true,"workload":"repeated","negative_ttl_ms":10000,"expected_origin_queries":3},
+  {"case":"negative-unique-miss","negative_cache":true,"workload":"unique","negative_ttl_ms":10000,"expected_origin_queries":62},
+  {"case":"negative-create-ttl","negative_cache":true,"workload":"create","negative_ttl_ms":1200,"invalidate":false,"expected_origin_queries":2},
+  {"case":"negative-create-invalidate","negative_cache":true,"workload":"create","negative_ttl_ms":1200,"invalidate":true,"expected_origin_queries":2}
+]

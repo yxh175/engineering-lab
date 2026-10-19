@@ -1,0 +1,13 @@
+CREATE DATABASE engine_lab_036 CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE engine_lab_036;
+CREATE TABLE fixture (id INT NOT NULL PRIMARY KEY, code VARCHAR(16) NOT NULL, KEY ix_code(code)) ENGINE=InnoDB;
+CREATE TABLE digits (n TINYINT NOT NULL PRIMARY KEY);
+INSERT INTO digits VALUES (0),(1),(2),(3),(4),(5),(6),(7),(8),(9);
+INSERT INTO fixture(id,code)
+SELECT n+1, CASE n WHEN 0 THEN '1' WHEN 1 THEN '01' WHEN 2 THEN '1x' WHEN 3 THEN ' 1' WHEN 4 THEN '1.0' ELSE CAST(n+1000 AS CHAR) END
+FROM (SELECT d0.n+10*d1.n+100*d2.n+1000*d3.n+10000*d4.n AS n
+      FROM digits d0 CROSS JOIN digits d1 CROSS JOIN digits d2 CROSS JOIN digits d3 CROSS JOIN digits d4) seq
+WHERE n<50000;
+DROP TABLE digits;
+ANALYZE TABLE fixture;
+SELECT COUNT(*),MIN(id),MAX(id) FROM fixture;

@@ -1,0 +1,5 @@
+[
+  {"case":"noeviction-small","maxmemory":2097152,"policy":"noeviction","compose":"compose-noeviction.yml"},
+  {"case":"lru-small","maxmemory":2097152,"policy":"allkeys-lru","compose":"compose-lru.yml"},
+  {"case":"capacity-control","maxmemory":8388608,"policy":"noeviction","compose":"compose-control.yml"}
+]

@@ -1,0 +1,1 @@
+confluent-kafka==2.11.1 --hash=sha256:4b4c371090ded6084c893a51e8aba19bc8ae6ce9c019658cb11fab82b3e93458

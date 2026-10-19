@@ -1,0 +1,7 @@
+SELECT t.PROCESSLIST_ID,IFNULL(l.INDEX_NAME,'NULL'),l.LOCK_TYPE,l.LOCK_MODE,
+       l.LOCK_STATUS,IFNULL(l.LOCK_DATA,'NULL'),l.ENGINE_LOCK_ID
+FROM performance_schema.data_locks l
+JOIN performance_schema.threads t ON t.THREAD_ID=l.THREAD_ID
+WHERE l.OBJECT_SCHEMA='engine_lab_015' AND l.OBJECT_NAME='accounts'
+  AND t.PROCESSLIST_ID IN ({actor_a},{actor_b})
+ORDER BY t.PROCESSLIST_ID,l.LOCK_TYPE,l.LOCK_DATA;

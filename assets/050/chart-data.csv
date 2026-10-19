@@ -1,0 +1,41 @@
+round,case,backend_pid,rows,ids,exact_top10_recall,scan_node,scan_rows,rows_removed_by_filter,execution_ms,passed
+1,ann-filtered,116,0,[],0.0,Index Scan,0,40,0.069,True
+1,iterative-filtered,123,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.895,True
+1,exact-filtered,130,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.344,True
+1,unfiltered-control,137,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.098,True
+2,unfiltered-control,150,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.089,True
+2,exact-filtered,158,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.314,True
+2,iterative-filtered,165,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.911,True
+2,ann-filtered,173,0,[],0.0,Index Scan,0,40,0.073,True
+3,ann-filtered,180,0,[],0.0,Index Scan,0,40,0.115,True
+3,iterative-filtered,187,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.959,True
+3,exact-filtered,194,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.431,True
+3,unfiltered-control,208,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.087,True
+4,unfiltered-control,215,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.076,True
+4,exact-filtered,222,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.381,True
+4,iterative-filtered,229,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,1.078,True
+4,ann-filtered,236,0,[],0.0,Index Scan,0,40,0.102,True
+5,ann-filtered,243,0,[],0.0,Index Scan,0,40,0.063,True
+5,iterative-filtered,250,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.895,True
+5,exact-filtered,264,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.421,True
+5,unfiltered-control,271,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.095,True
+6,unfiltered-control,278,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.078,True
+6,exact-filtered,285,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.41,True
+6,iterative-filtered,292,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.886,True
+6,ann-filtered,299,0,[],0.0,Index Scan,0,40,0.094,True
+7,ann-filtered,312,0,[],0.0,Index Scan,0,40,0.102,True
+7,iterative-filtered,320,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.95,True
+7,exact-filtered,327,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.453,True
+7,unfiltered-control,334,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.092,True
+8,unfiltered-control,341,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.06,True
+8,exact-filtered,348,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.401,True
+8,iterative-filtered,355,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.937,True
+8,ann-filtered,369,0,[],0.0,Index Scan,0,40,0.065,True
+9,ann-filtered,376,0,[],0.0,Index Scan,0,40,0.064,True
+9,iterative-filtered,383,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.997,True
+9,exact-filtered,390,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.382,True
+9,unfiltered-control,397,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.087,True
+10,unfiltered-control,404,10,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",1.0,Index Scan,10,0,0.093,True
+10,exact-filtered,411,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Seq Scan,100,9900,0.31,True
+10,iterative-filtered,425,10,"[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]",1.0,Index Scan,10,990,0.966,True
+10,ann-filtered,432,0,[],0.0,Index Scan,0,40,0.062,True

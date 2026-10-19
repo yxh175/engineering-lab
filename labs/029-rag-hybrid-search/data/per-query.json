@@ -1,0 +1,1994 @@
+[
+  {
+    "query_id": "q01",
+    "query": "OR-731 要怎么重放，使用什么标识？",
+    "ranking": [
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4274207651615143
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4087657332420349
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.405173122882843
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4050443172454834
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.3938293159008026
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.39370810985565186
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.39152792096138
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.371152400970459
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.36593306064605713
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.35047176480293274
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.3464452624320984
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.34433597326278687
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.329404354095459
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3195553123950958
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.31157368421554565
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.3031189441680908
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0
+    },
+    "first_relevant_rank_within10": 6,
+    "mrr10": 0.16666666666666666,
+    "single_complete_evidence_at3": false,
+    "union_complete_evidence_at3": false,
+    "evidence_coverage_at3": 0.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 566,
+    "top3_unique_chars": 566
+  },
+  {
+    "query_id": "q02",
+    "query": "订单已经扣款但界面还在待支付，应该查什么并恢复哪个步骤？",
+    "ranking": [
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.6676183938980103
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5686641335487366
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5651454925537109
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5612891912460327
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.552933931350708
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.5456072092056274
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.5316604971885681
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.5174805521965027
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.5043121576309204
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.48485395312309265
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4817769229412079
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4810464680194855
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4749855399131775
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4564279615879059
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4564014673233032
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.44457313418388367
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 788,
+    "top3_unique_chars": 788
+  },
+  {
+    "query_id": "q03",
+    "query": "IV-284 重试前需要查哪条流水，旧预占标识还能用吗？",
+    "ranking": [
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.5588816404342651
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5423148274421692
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5393447279930115
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.5268449187278748
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.5178521871566772
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5136290788650513
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5094349384307861
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5086125731468201
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5068286657333374
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4930550158023834
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4777993857860565
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.47374337911605835
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4716464579105377
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.47154700756073
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.44256001710891724
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4323059022426605
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 823,
+    "top3_unique_chars": 823
+  },
+  {
+    "query_id": "q04",
+    "query": "页面显示没货但账本还有库存，怎样恢复展示而不修改真实库存？",
+    "ranking": [
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.665103554725647
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.6510809659957886
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.6212835311889648
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5824320316314697
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5747075080871582
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.5459599494934082
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.5448248982429504
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.5380268692970276
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.5336242318153381
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5321126580238342
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.5315865278244019
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.5257585644721985
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5215823650360107
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.5140587687492371
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.49016112089157104
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4561704993247986
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 2,
+    "mrr10": 0.5,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 574,
+    "top3_unique_chars": 574
+  },
+  {
+    "query_id": "q05",
+    "query": "BL-906 何时能续跑批次，何时必须冻结？",
+    "ranking": [
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.4653002619743347
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4648546278476715
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4636940360069275
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4630621671676636
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.44985342025756836
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4457181692123413
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.41204869747161865
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.40717190504074097
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.406394362449646
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.40080997347831726
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.39689552783966064
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.3862026333808899
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.34147924184799194
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.334877073764801
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.33086293935775757
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.28844785690307617
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 4,
+    "mrr10": 0.25,
+    "single_complete_evidence_at3": false,
+    "union_complete_evidence_at3": false,
+    "evidence_coverage_at3": 0.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 770,
+    "top3_unique_chars": 770
+  },
+  {
+    "query_id": "q06",
+    "query": "月度账单已经生成但用户没收到邮件，需要重做扣费吗？",
+    "ranking": [
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5993028879165649
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5548109412193298
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4945420026779175
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.48635855317115784
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.48571473360061646
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.48536789417266846
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.465856671333313
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.46151790022850037
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.44298532605171204
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.43524545431137085
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.42459097504615784
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.41424715518951416
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4123586416244507
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.40900951623916626
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4004470109939575
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.3844817578792572
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 788,
+    "top3_unique_chars": 788
+  },
+  {
+    "query_id": "q07",
+    "query": "CT-417 的来源快照比现有目录旧时应该怎样处理？",
+    "ranking": [
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.5475043058395386
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5444092750549316
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.526046872138977
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.5240240097045898
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4947130084037781
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4905011057853699
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4872404634952545
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.48392927646636963
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.47671616077423096
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.4603000283241272
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4490627646446228
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.43514227867126465
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.42163097858428955
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4190138578414917
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4064152240753174
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.3796309530735016
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 792,
+    "top3_unique_chars": 792
+  },
+  {
+    "query_id": "q08",
+    "query": "详情页新标题已生效但搜索显示旧标题，应该补哪一个环节？",
+    "ranking": [
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5071934461593628
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4806787669658661
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4726942777633667
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4662521481513977
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.44472286105155945
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4433741271495819
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4390565752983093
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.43571737408638
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4310315251350403
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.4283207058906555
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4203149378299713
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4161572754383087
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3901846408843994
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.3757401406764984
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.3450143337249756
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.32923996448516846
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 0.0
+    },
+    "first_relevant_rank_within10": 9,
+    "mrr10": 0.1111111111111111,
+    "single_complete_evidence_at3": false,
+    "union_complete_evidence_at3": false,
+    "evidence_coverage_at3": 0.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 558,
+    "top3_unique_chars": 558
+  },
+  {
+    "query_id": "q09",
+    "query": "SH-552 后怎样判断能否再次预约承运商？",
+    "ranking": [
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.5980338454246521
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5039244890213013
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.48833906650543213
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4745557904243469
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4604254364967346
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.45818084478378296
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4371447265148163
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.43358495831489563
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.43213775753974915
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4255906939506531
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4223370850086212
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4164658188819885
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4102359116077423
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.3831612467765808
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.3728945255279541
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.37063148617744446
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 1029,
+    "top3_unique_chars": 1029
+  },
+  {
+    "query_id": "q10",
+    "query": "运输单已创建却没有打印任务，应该重建单据还是补发事件？",
+    "ranking": [
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5778714418411255
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.56117844581604
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.560809314250946
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.5336494445800781
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5255324244499207
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.5185686945915222
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5136187076568604
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5007911324501038
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.469106525182724
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4674445390701294
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.45503586530685425
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.45038390159606934
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.4411366283893585
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.4180569052696228
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.3957192301750183
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.3864330053329468
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 0.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 4,
+    "mrr10": 0.25,
+    "single_complete_evidence_at3": false,
+    "union_complete_evidence_at3": false,
+    "evidence_coverage_at3": 0.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 332,
+    "top3_unique_chars": 332
+  },
+  {
+    "query_id": "q11",
+    "query": "SE-663 对索引别名切换有什么两个前置条件？",
+    "ranking": [
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5980537533760071
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4680006504058838
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4264194965362549
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4253588318824768
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4234696626663208
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.42051199078559875
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.3915609121322632
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.38903701305389404
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.38598448038101196
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.3696909546852112
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.3569209575653076
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.3543603718280792
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.350137859582901
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.3295092284679413
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3206951320171356
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.28717732429504395
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 791,
+    "top3_unique_chars": 791
+  },
+  {
+    "query_id": "q12",
+    "query": "新索引有文档但请求还查不到，应检查哪个路由状态？",
+    "ranking": [
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.673417329788208
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.6102880835533142
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.49932530522346497
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4966427683830261
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.49593019485473633
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4930342733860016
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4860508143901825
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4696679413318634
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4658217430114746
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.4640156626701355
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4286767542362213
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4220764636993408
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.41536417603492737
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.39157193899154663
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3878403902053833
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.34760940074920654
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 1012,
+    "top3_unique_chars": 1012
+  },
+  {
+    "query_id": "q13",
+    "query": "AU-845 的 key_version 已撤销还能临时恢复密钥吗？",
+    "ranking": [
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.6545161604881287
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5187962651252747
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.5067862272262573
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.49603933095932007
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4896095395088196
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4891727864742279
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4783593416213989
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.47133997082710266
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4502074122428894
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.43971696496009827
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4262399673461914
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.4105603098869324
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4046373963356018
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.38066545128822327
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3791786730289459
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.36628419160842896
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 885,
+    "top3_unique_chars": 885
+  },
+  {
+    "query_id": "q14",
+    "query": "能登录但不能下载报表，应该改授权还是延长登录有效期？",
+    "ranking": [
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.5771257877349854
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5715391635894775
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5538954138755798
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.5011782646179199
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5007813572883606
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4995104670524597
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.49107828736305237
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4885626435279846
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.46087950468063354
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.4571860730648041
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.45043426752090454
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4499579966068268
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.44257086515426636
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.42899879813194275
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.4244001507759094
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.41707998514175415
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 543,
+    "top3_unique_chars": 543
+  },
+  {
+    "query_id": "q15",
+    "query": "UP-328 时什么条件下可以重新合并，缺片该怎么办？",
+    "ranking": [
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.5757684707641602
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5129345655441284
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5055410861968994
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5041099190711975
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4913787841796875
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.46599531173706055
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.4658823013305664
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4633319079875946
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.45925673842430115
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4500478208065033
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.435068815946579
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4132400155067444
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4051663875579834
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4029012620449066
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.39730146527290344
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3818545937538147
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 797,
+    "top3_unique_chars": 797
+  },
+  {
+    "query_id": "q16",
+    "query": "对象已上传成功但下载不存在，哪个发布步骤可能需要重放？",
+    "ranking": [
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.6308535933494568
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5671364068984985
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5358904004096985
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.5270262956619263
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5069689154624939
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.5010668039321899
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4952477812767029
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.48143112659454346
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4806974232196808
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.46970421075820923
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.45229166746139526
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.4481223523616791
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4385860562324524
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.43034905195236206
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.42755502462387085
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.3824917674064636
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 578,
+    "top3_unique_chars": 578
+  },
+  {
+    "query_id": "q17",
+    "query": "NT-779 已有接收回执时还能换 message_id 重新发短信吗？",
+    "ranking": [
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.6424360871315002
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5868409872055054
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5715340375900269
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5555933713912964
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5460964441299438
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.5370252132415771
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.53554368019104
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.5312575101852417
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.5282601118087769
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.5256760120391846
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5120190978050232
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.48301076889038086
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.4697588086128235
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4510452449321747
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4200703501701355
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3731159567832947
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 767,
+    "top3_unique_chars": 767
+  },
+  {
+    "query_id": "q18",
+    "query": "站内信正文存在但未读角标为零，应该恢复哪份投影？",
+    "ranking": [
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.6078063249588013
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.5485656261444092
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4967394173145294
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.48441970348358154
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.48406121134757996
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.4835798740386963
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4798184633255005
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.43420442938804626
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4307093024253845
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4244278073310852
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4179428815841675
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4109567701816559
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3945460021495819
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3891288936138153
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.3784303367137909
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.36437150835990906
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 2,
+    "mrr10": 0.5,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 789,
+    "top3_unique_chars": 789
+  },
+  {
+    "query_id": "q19",
+    "query": "EX-214 文件完整时应该重跑查询还是重新签下载链接？",
+    "ranking": [
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.6287110447883606
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5924323797225952
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.5922232866287231
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.5759711265563965
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.5690381526947021
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.5638357996940613
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5552253127098083
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.539863646030426
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.5228151082992554
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.5143308639526367
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.5113464593887329
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.5033849477767944
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4970293641090393
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.4667540192604065
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.46631717681884766
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.44877880811691284
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 786,
+    "top3_unique_chars": 786
+  },
+  {
+    "query_id": "q20",
+    "query": "导出漏掉最后一页且游标字段不完整，能直接向旧文件追加吗？",
+    "ranking": [
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.6054267883300781
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.5112217664718628
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4930088222026825
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4899198114871979
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.48549169301986694
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.47675204277038574
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.47189435362815857
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.47065263986587524
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.46092990040779114
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.43946486711502075
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.4372956454753876
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.4041089415550232
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.39119547605514526
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.3903248906135559
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.38546133041381836
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3822804391384125
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 779,
+    "top3_unique_chars": 779
+  },
+  {
+    "query_id": "q21",
+    "query": "ST-492 已有成功银行回执后应该怎么恢复？",
+    "ranking": [
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.5747807025909424
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5459625720977783
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5215807557106018
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.511171817779541
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4817275106906891
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4736241102218628
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.4731498658657074
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.4728749990463257
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.46595585346221924
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4628017544746399
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4570235013961792
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.45340394973754883
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.45318371057510376
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.41886886954307556
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3869810104370117
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.3521600067615509
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 557,
+    "top3_unique_chars": 557
+  },
+  {
+    "query_id": "q22",
+    "query": "流水一致但试算和正式结算金额不同，先比较什么版本？",
+    "ranking": [
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.6082955598831177
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4971049726009369
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.43097546696662903
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4003790318965912
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.39812171459198
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.37419822812080383
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.3627453148365021
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.35682639479637146
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.35673606395721436
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.3538457751274109
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.34165629744529724
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.3303983211517334
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.31942853331565857
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.3091973662376404
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.30701515078544617
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.29379114508628845
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 999,
+    "top3_unique_chars": 999
+  },
+  {
+    "query_id": "q23",
+    "query": "GW-608 上游提交状态未知时能否换标识直接重试？",
+    "ranking": [
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.588943362236023
+      },
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.5571468472480774
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.5424145460128784
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.5269633531570435
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.498257577419281
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.4902888238430023
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4850107431411743
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.4804917573928833
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4739140570163727
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.4514673948287964
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.44299280643463135
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.43255814909935
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.4297764301300049
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.4120892882347107
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.37488240003585815
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.35983696579933167
+      }
+    ],
+    "doc_recall": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 1,
+    "mrr10": 1.0,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 777,
+    "top3_unique_chars": 777
+  },
+  {
+    "query_id": "q24",
+    "query": "服务健康但用户请求仍到旧实例，应该刷新什么？",
+    "ranking": [
+      {
+        "chunk_id": "training:00000:00115",
+        "score": 0.4777478575706482
+      },
+      {
+        "chunk_id": "gateway:00000:00342",
+        "score": 0.47350701689720154
+      },
+      {
+        "chunk_id": "search:00000:00334",
+        "score": 0.46763476729393005
+      },
+      {
+        "chunk_id": "release:00000:00108",
+        "score": 0.46129941940307617
+      },
+      {
+        "chunk_id": "auth:00000:00320",
+        "score": 0.4391728639602661
+      },
+      {
+        "chunk_id": "dashboard:00000:00109",
+        "score": 0.4303504228591919
+      },
+      {
+        "chunk_id": "orders:00000:00358",
+        "score": 0.4176284372806549
+      },
+      {
+        "chunk_id": "billing:00000:00315",
+        "score": 0.3968558609485626
+      },
+      {
+        "chunk_id": "export:00000:00336",
+        "score": 0.38708341121673584
+      },
+      {
+        "chunk_id": "inventory:00000:00350",
+        "score": 0.3681012988090515
+      },
+      {
+        "chunk_id": "notify:00000:00325",
+        "score": 0.3644874393939972
+      },
+      {
+        "chunk_id": "settlement:00000:00334",
+        "score": 0.3559117913246155
+      },
+      {
+        "chunk_id": "glossary:00000:00231",
+        "score": 0.3541867136955261
+      },
+      {
+        "chunk_id": "catalog:00000:00329",
+        "score": 0.3465941846370697
+      },
+      {
+        "chunk_id": "upload:00000:00355",
+        "score": 0.34571635723114014
+      },
+      {
+        "chunk_id": "shipping:00000:00337",
+        "score": 0.3194408416748047
+      }
+    ],
+    "doc_recall": {
+      "1": 0.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "first_relevant_rank_within10": 2,
+    "mrr10": 0.5,
+    "single_complete_evidence_at3": true,
+    "union_complete_evidence_at3": true,
+    "evidence_coverage_at3": 1.0,
+    "unique_docs_at3": 3,
+    "top3_chars": 791,
+    "top3_unique_chars": 791
+  }
+]

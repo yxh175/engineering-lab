@@ -1,0 +1,4 @@
+CREATE DATABASE engine_lab_038;
+USE engine_lab_038;
+CREATE TABLE inventory(id INT PRIMARY KEY,stock INT NOT NULL,version INT NOT NULL) ENGINE=InnoDB;
+INSERT INTO inventory VALUES(1,10,0);

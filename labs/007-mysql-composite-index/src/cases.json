@@ -1,0 +1,9 @@
+[
+  {"case":"prefix-ordered","phase":"before","where":"tenant_id=2 AND kind=3 AND seq_no>=100 AND seq_no<110","switch":"skip_scan=on","expected_rows":10},
+  {"case":"prefix-reordered","phase":"before","where":"seq_no<110 AND kind=3 AND seq_no>=100 AND tenant_id=2","switch":"skip_scan=on","expected_rows":10},
+  {"case":"suffix-default","phase":"before","where":"seq_no=1234","switch":"skip_scan=on","expected_rows":40},
+  {"case":"suffix-skip-off","phase":"before","where":"seq_no=1234","switch":"skip_scan=off","expected_rows":40},
+  {"case":"range-before-equality","phase":"before","where":"tenant_id=2 AND kind>=3 AND kind<7 AND seq_no=1234","switch":"skip_scan=on","expected_rows":4},
+  {"case":"range-index-fixed","phase":"after","where":"tenant_id=2 AND kind>=3 AND kind<7 AND seq_no=1234","switch":"skip_scan=on","expected_rows":4},
+  {"case":"suffix-index-fixed","phase":"after","where":"seq_no=1234","switch":"skip_scan=on","expected_rows":40}
+]

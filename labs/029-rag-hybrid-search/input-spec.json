@@ -1,0 +1,31 @@
+{
+  "source_model": "BAAI/bge-small-zh-v1.5",
+  "source_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "source_chunk_policy": "char384-overlap0",
+  "files": {
+    "corpus": {
+      "path": "labs/028-rag-chunk-recall/data/corpus.json",
+      "sha256": "db060c0ccc54db5782095b5874228c71335645631eade8d392b6c057aa932fc9"
+    },
+    "qrels": {
+      "path": "labs/028-rag-chunk-recall/data/qrels.json",
+      "sha256": "d7ac3130400e3945d950fca8f29e1e92ff96b640496a539682026fa83f8f0c5c"
+    },
+    "chunks": {
+      "path": "labs/029-rag-hybrid-search/data/chunks.json",
+      "sha256": "aa15c36bf7f23a4acf1ed982ef38f10bf56ececaeea9acf53a4999af074e85c9"
+    },
+    "chunk_vectors": {
+      "path": "labs/029-rag-hybrid-search/data/chunk-vectors.npy",
+      "sha256": "6e68bb8c1fc16a33c6c5a10b08a02049bd0922ef27b4dfe9a4b0208e5a524af9"
+    },
+    "query_vectors": {
+      "path": "labs/029-rag-hybrid-search/data/query-vectors.npy",
+      "sha256": "bc76e60041037963c73da4e23cbfce9eb77c568a6711050923715386406049dd"
+    },
+    "reference_rankings": {
+      "path": "labs/029-rag-hybrid-search/data/per-query.json",
+      "sha256": "1840d1456bcc8b98a743cee64b150c33e3928bc081594860fe1c4a8106aac82f"
+    }
+  }
+}

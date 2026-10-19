@@ -1,0 +1,16 @@
+name: engineering-lab-043
+services:
+  redis:
+    image: redis:7.4-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    command: [redis-server, --save, '', --appendonly, 'no', --maxmemory, 32mb, --maxmemory-policy, noeviction]
+    ports: ['127.0.0.1::6379']
+    cpus: 1.0
+    mem_limit: 128m
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    networks: [isolated]
+networks:
+  isolated: {}

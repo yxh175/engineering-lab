@@ -1,0 +1,21 @@
+name: engineering-lab-020
+services:
+  builder:
+    image: engineering-lab-020:local
+    build: .
+    working_dir: /lab
+    volumes:
+      - .:/lab
+    entrypoint: [sh, -c, 'go version && go vet ./src && go build -o .work/lab020-linux ./src']
+    cpus: 2.0
+    mem_limit: 512m
+    network_mode: none
+  runner:
+    image: engineering-lab-020:local
+    working_dir: /lab
+    volumes:
+      - .:/lab
+    entrypoint: [/lab/.work/lab020-linux]
+    cpus: 1.0
+    mem_limit: 128m
+    network_mode: none

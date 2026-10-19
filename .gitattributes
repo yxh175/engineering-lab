@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png -text
+*.npy -text
+*.csv -text whitespace=cr-at-eol
+labs/**/data/** -text
+*.ps1 text eol=lf
+*.sh text eol=lf

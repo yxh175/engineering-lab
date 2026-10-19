@@ -1,0 +1,5 @@
+[
+  {"case":"uniform", "offset_mode":"none", "base_ms":1200},
+  {"case":"batch-jitter", "offset_mode":"one-per-batch", "base_ms":1200, "seed":20261004},
+  {"case":"per-key-jitter", "offset_mode":"one-per-key", "base_ms":1200, "seed":20261003}
+]

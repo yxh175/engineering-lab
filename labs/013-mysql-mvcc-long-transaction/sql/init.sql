@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS engine_lab_013;
+CREATE DATABASE engine_lab_013;
+USE engine_lab_013;
+CREATE TABLE account (id INT NOT NULL PRIMARY KEY, value INT NOT NULL) ENGINE=InnoDB;
+INSERT INTO account VALUES (1,0);
+SELECT COUNT(*),MIN(value),MAX(value) FROM account;
+SHOW CREATE TABLE account;

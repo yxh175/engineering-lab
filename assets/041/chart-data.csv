@@ -1,0 +1,31 @@
+round,case,script_sha1,error_kind,final_state,final_after,destination_type,destination_values,partial_write_retained,business_completed,passed
+1,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+1,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+1,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+2,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+2,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+2,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+3,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+3,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+3,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+4,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+4,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+4,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+5,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+5,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+5,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+6,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+6,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+6,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+7,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+7,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+7,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+8,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+8,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+8,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+9,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True
+9,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+9,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+10,normal-list,1ebf8370fed54118189b02374f7e74d344a99e59,none,1,1,list,"[""payload"", ""old""]",False,True,True
+10,validate-type,1ebf8370fed54118189b02374f7e74d344a99e59,DEST_NOT_LIST,0,0,string,"""wrong""",False,False,True
+10,write-then-error,e4bfc9d773b9345c82a2ae12d298c6ae23d54864,WRONGTYPE,1,0,string,"""wrong""",True,False,True

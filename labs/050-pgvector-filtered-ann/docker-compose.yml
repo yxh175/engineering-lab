@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.2-pg17@sha256:feb68f4f15446397d8cac7f4fe48fe4586de83160d1fc48b46283312d1a33966
+    cpus: 1
+    mem_limit: 256m
+    environment:
+      POSTGRES_DB: lab050
+      POSTGRES_USER: lab050
+      POSTGRES_PASSWORD: lab050-local-fixture
+    command: [postgres, -c, shared_buffers=32MB, -c, max_connections=20, -c, jit=off]
+    networks: [isolated]
+    volumes:
+      - data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD, pg_isready, -U, lab050, -d, lab050]
+      interval: 1s
+      timeout: 3s
+      retries: 90
+networks:
+  isolated:
+    internal: true
+volumes:
+  data:

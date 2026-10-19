@@ -1,0 +1,28 @@
+name: engineering-lab-013
+services:
+  mysql:
+    image: mysql:8.4@sha256:0744ee5ef89ce6ccfa13de3e579fe6b9e27f93dd70da9c06d2c908b1b193fb8d
+    environment:
+      MYSQL_ROOT_PASSWORD: lab-only-password
+    command:
+      - --skip-log-bin
+      - --innodb-buffer-pool-size=128M
+      - --innodb-purge-threads=1
+      - --innodb-purge-batch-size=1
+      - --innodb-stats-persistent-sample-pages=100
+      - --performance-schema=ON
+    cpus: 2.0
+    mem_limit: 1g
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: [CMD-SHELL, 'MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysql --protocol=TCP -h127.0.0.1 -uroot -N -e "SELECT 1"']
+      interval: 2s
+      timeout: 3s
+      retries: 60
+    networks: [isolated]
+volumes:
+  db-data:
+networks:
+  isolated:
+    internal: true

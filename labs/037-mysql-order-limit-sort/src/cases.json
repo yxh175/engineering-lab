@@ -1,0 +1,5 @@
+[
+ {"case":"sort","tenant":7,"phase":"before-index"},
+ {"case":"ordered","tenant":7,"phase":"after-index"},
+ {"case":"ordered-control","tenant":8,"phase":"after-index"}
+]

@@ -1,0 +1,5 @@
+[
+  {"case":"del-unfenced", "unlock":"DEL", "fenced":false},
+  {"case":"owner-lua-unfenced", "unlock":"owner-lua", "fenced":false},
+  {"case":"owner-lua-fenced", "unlock":"owner-lua", "fenced":true}
+]

@@ -1,0 +1,45 @@
+name: engineering-lab-026
+services:
+  kafka:
+    image: apache/kafka:3.9.1@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed
+    container_name: lab026-kafka
+    hostname: kafka
+    ports: ["127.0.0.1:19026:9094"]
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,HOST:PLAINTEXT
+      KAFKA_LISTENERS: CONTROLLER://:9093,BROKER://:9092,HOST://:9094
+      KAFKA_ADVERTISED_LISTENERS: BROKER://kafka:9092,HOST://127.0.0.1:19026
+      KAFKA_INTER_BROKER_LISTENER_NAME: BROKER
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      CLUSTER_ID: 4L6g3nShT-eMCtK--X86sw
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+      KAFKA_HEAP_OPTS: -Xms256m -Xmx512m
+    mem_limit: 1g
+    cpus: 2.0
+    healthcheck:
+      test: [CMD, /opt/kafka/bin/kafka-topics.sh, --bootstrap-server, kafka:9092, --list]
+      interval: 5s
+      timeout: 10s
+      retries: 15
+      start_period: 15s
+  mysql:
+    image: mysql:8.4@sha256:0744ee5ef89ce6ccfa13de3e579fe6b9e27f93dd70da9c06d2c908b1b193fb8d
+    container_name: lab026-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: lab026-password
+      MYSQL_DATABASE: lab026
+    mem_limit: 512m
+    cpus: 1.0
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -uroot, -plab026-password]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
