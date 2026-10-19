@@ -42,7 +42,20 @@ elif a.action=='produce':
 else:
     c=Consumer({'bootstrap.servers':a.bootstrap,'group.id':'lab027-observer-'+a.topic,'enable.auto.commit':False,'enable.auto.offset.store':False,'auto.offset.reset':'earliest','socket.timeout.ms':6000})
     try:
-        low,high=c.get_watermark_offsets(TopicPartition(a.topic,0),timeout=10,cached=False);c.assign([TopicPartition(a.topic,0,low)]);messages=[];deadline=time.monotonic()+15
+        watermark_deadline=time.monotonic()+12;d['watermark_polls']=[]
+        while True:
+            try:
+                c.list_topics(a.topic,timeout=2)
+                low,high=c.get_watermark_offsets(TopicPartition(a.topic,0),timeout=3,cached=False)
+                d['watermark_polls'].append({'error_code':0,'low':low,'high':high,'elapsed_seconds':time.monotonic()-tick})
+                break
+            except KafkaException as exc:
+                error=exc.args[0]
+                d['watermark_polls'].append({'error_code':error.code(),'error_name':error.name(),'elapsed_seconds':time.monotonic()-tick})
+                if error.code() not in {KafkaError.NOT_LEADER_FOR_PARTITION,KafkaError.LEADER_NOT_AVAILABLE} or time.monotonic()>=watermark_deadline:
+                    raise
+                time.sleep(.25)
+        c.assign([TopicPartition(a.topic,0,low)]);messages=[];deadline=time.monotonic()+15
         while len(messages)<high-low and time.monotonic()<deadline:
             msg=c.poll(.2)
             if msg is None:continue
