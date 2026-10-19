@@ -3,7 +3,7 @@ import json
 import os
 import time
 from datetime import datetime, timezone
-from confluent_kafka import Consumer,Producer,TopicPartition,version,libversion
+from confluent_kafka import Consumer,Producer,TopicPartition,version,libversion,KafkaError,KafkaException
 from confluent_kafka.admin import AdminClient,NewTopic,ConfigResource,ResourceType
 from settings import BROKER
 p=argparse.ArgumentParser();p.add_argument('action',choices=['create','metadata','produce','read']);p.add_argument('topic');p.add_argument('--bootstrap',default=BROKER);p.add_argument('--unclean',choices=['true','false'],default='false');p.add_argument('--acks',choices=['1','all'],default='all');p.add_argument('--label');p.add_argument('--event');a=p.parse_args()
@@ -15,7 +15,19 @@ def metadata():
 if a.action=='create':
     cfg={'min.insync.replicas':'2','unclean.leader.election.enable':a.unclean}
     admin.create_topics([NewTopic(a.topic,num_partitions=1,replication_factor=-1,replica_assignment=[[1,2,3]],config=cfg)])[a.topic].result(15)
-    resource=ConfigResource(ResourceType.TOPIC,a.topic);vals=admin.describe_configs([resource])[resource].result(10)
+    resource=ConfigResource(ResourceType.TOPIC,a.topic)
+    config_deadline=time.monotonic()+12;d['config_polls']=[]
+    while True:
+        try:
+            vals=admin.describe_configs([resource],request_timeout=2)[resource].result(3)
+            d['config_polls'].append({'error_code':0,'values':{n:vals[n].value for n in cfg},'elapsed_seconds':time.monotonic()-tick})
+            break
+        except KafkaException as exc:
+            error=exc.args[0]
+            d['config_polls'].append({'error_code':error.code(),'error_name':error.name(),'elapsed_seconds':time.monotonic()-tick})
+            if error.code()!=KafkaError.UNKNOWN_TOPIC_OR_PART or time.monotonic()>=config_deadline:
+                raise
+            time.sleep(.25)
     d['configs']={n:{'value':vals[n].value,'source':str(vals[n].source),'is_default':vals[n].is_default} for n in cfg}
     assert {n:d['configs'][n]['value'] for n in cfg}==cfg
     d['metadata']=metadata()

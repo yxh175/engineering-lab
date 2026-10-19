@@ -100,6 +100,17 @@ try:
             call(name+'/delete-resources',['delete','deployment/'+name,'service/'+name,'pod/'+hname,'-n','lab024','--wait=true','--timeout=60s'],timeout=75)
             trial.update(passed=True,old_pod_uid=olduid,old_pod_name=oldname,new_pod_uids=[p['metadata']['uid'] for p in newpods],requests=6,status=502 if mode=='exit-now' else 200,old_exit_code=0,signal_uptime_ms=signal['uptime_ms'],exit_uptime_ms=frames[-1]['uptime_ms'],observations=len(observations))
             print(f'{name}: PASS six HTTP{trial["status"]}, old exit0',flush=True)
+    # Deployment deletion can finish before background Pod deletion converges.
+    cleanup_deadline=time.monotonic()+60
+    cleanup_poll=0
+    while True:
+        pending=json.loads(call(f'final-pods-wait-{cleanup_poll:03}',
+                                ['get','pods','-n','lab024','-o','json']))['items']
+        if not pending:break
+        if time.monotonic()>=cleanup_deadline:
+            raise TimeoutError('Owned Pods remain after the cleanup deadline')
+        cleanup_poll+=1
+        time.sleep(.25)
     assert not json.loads(call('final-pods',['get','pods','-n','lab024','-o','json']))['items']
     assert not json.loads(call('final-deployments',['get','deployments','-n','lab024','-o','json']))['items']
 except BaseException as exc:failure=f'{type(exc).__name__}: {exc}';(e.dest/'runner-exception.txt').write_text(traceback.format_exc(),encoding='utf-8')
